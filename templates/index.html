@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<title>Upload file</title>
+<h1>Upload your file</h1>
+<h2>Then you will know pallet (most common colors)</h2>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+<form method="POST" enctype="multipart/form-data">
+    <input type=file name=upfile>
+    <input type=submit value=Upload>
+
+</form>
+
+<br>
+
+<p><img src="{{ image }}" alt="" width="216" height="233"/></p>
+
+
+<div>
+    {%for color in colors %}
+        <h3>RGB Composition:  {{ color }}</h3>
+    {% endfor %}
+</div>
+
+
+
