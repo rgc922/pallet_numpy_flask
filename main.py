@@ -14,7 +14,7 @@ import os
 app = Flask(__name__)
 
 ### esto es para el Flask, sin esto genera error
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = 'YOUR KEY'
 
 
 IMG_FOLDER = os.path.join('static', 'image')
